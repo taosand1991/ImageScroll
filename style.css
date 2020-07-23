@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.images {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  transition: scroll 0.2s ease-in-out;
+}
+
+.images img {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  flex: 0 0 25%;
+  cursor: pointer;
+}
+
+.images img:hover {
+  opacity: 0.5;
+}
+
+#prev,
+#next {
+  position: absolute;
+  top: 50%;
+  font-size: 30px;
+  color: black;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+#prev {
+  left: 0;
+}
+
+#next {
+  right: 0;
+}
+
+@keyframes slide {
+  to {
+    transition: all 0.2s linear;
+  }
+}
+
+#show-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
